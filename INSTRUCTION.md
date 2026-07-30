@@ -3,6 +3,44 @@
 To apply the configuration, secrets, and deploy the application, execute the following script from the root of the repository:
 `bash bootstrap.sh`
 
+Or run them by yourself
+
+```bash
+kind create cluster --config cluster.yml
+```
+
+```bash
+kubectl create ns todoapp
+```
+
+```bash
+kubectl create ns mysql
+```
+
+```bash
+kubectl apply -f .infrastructure/service.yml
+```
+
+```bash
+kubectl apply -f .infrastructure/configMapDB.yml
+```
+
+```bash
+kubectl apply -f .infrastructure/secretDB.yml
+```
+
+```bash
+kubectl apply -f .infrastructure/statefulSet.yml
+```
+
+```bash
+kubectl apply -f .infrastructure/secret.yml
+```
+
+```bash
+kubectl apply -f .infrastructure/deployment.yml
+```
+
 
 ### Validation
 
